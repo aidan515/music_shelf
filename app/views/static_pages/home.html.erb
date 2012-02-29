@@ -1,0 +1,55 @@
+<div id="content">
+  <div class="content-inner">
+      <div class="page">
+      	<div class = "home-section">
+        <div class="start">
+          <h1 class="home-headline">Sign up for Roundtable today.</h1>
+          <p class="instructions">Sign up and check out what roundtables are </br> taking place near you.</p>
+<script> var _gaq = _gaq || [];
+        _gaq.push(['_setCustomVar', 1, 'SignupButtonCopy', 'Sign Up For Square', 2]);
+        var _saq = _saq || [];
+        _saq.push(['SignupButtonCopy', 'Sign Up For Square']);
+</script>
+<form action="/users" class="classic-signup-form" method="post"><div style="margin:0;padding:0px;display:inline"><input name="authenticity_token" type="hidden" value="hJQICp/UwHSXF/82qyO0fjQKmKVa0tvCVjkA2sBYljU=" /></div>
+    <div class="email-field fade-label">
+      <label class="text" for="user_name"></label>
+      <input autocapitalize="off" autocorrect="off" class="text" id="user_name" placeholder="Full name" name="user[name]"
+      size="30" spellcheck="false" type="text" />
+    </div>
+    
+	<div class="email-field fade-label">
+      <label class="text" for="user_email"></label>
+      <input autocapitalize="off" autocorrect="off" class="text" id="user_email" placeholder="Type email	 here" name="user[email]"
+      size="30" spellcheck="false" type="text" />
+    </div>
+ 
+  <div class="field password-field fade-label">
+      <label class="text" for="user_password"></label>
+      <input class="text" id="user_password" name="user[password]" placeholder="Create password" size="30" type="password" />
+    </div>
+
+    <div class="field password-field fade-label">
+      <label class="text" for="user_password_confirmation"></label>
+      <input class="text" id="user_password-_onfirmation" name="user[password_confirmation]" placeholder="Confirm password" 
+      size="30" type="password" />
+	
+     <div class="button primary-button track-event"><input name="commit" type="submit" value="Create User" /></div>
+
+</form>
+
+<p class="instructions">Already a member? Sign in below.</p>
+<form action="/sessions" class="classic-signup-form" method="post"><div style="margin:0;padding:0px;display:inline"><input name="authenticity_token" type="hidden" value="hJQICp/UwHSXF/82qyO0fjQKmKVa0tvCVjkA2sBYljU=" /></div>
+    
+	<div class="email-field fade-label">
+      <label class="text" for="email"></label>
+      <input autocapitalize="off" autocorrect="off" class="text" id="email" placeholder="Type email here" name="user[email]"
+      size="30" spellcheck="false" type="text" />
+    </div>
+ 
+   <div class="field password-field fade-label">
+      <label class="text" for="password"></label>
+      <input class="text" id="password" name="password" placeholder="Type password" size="30" type="password" />
+    </div>
+
+    <div class="button primary-button track-event"><input name="commit" type="submit" value="Log In" /></div>
+</form>

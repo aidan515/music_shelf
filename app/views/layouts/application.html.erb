@@ -5,6 +5,19 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if lt IE 7 ]>
+  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+  <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <style>
+    .chromeFrameOverlayContent {
+      top: 50px;
+      margin-top: 0;
+    }
+  </style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<![endif]-->
+
+
 <head>
   <meta charset="utf-8">
 
@@ -12,20 +25,26 @@
        More info: h5bp.com/b/378 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>MusicShelf</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+	<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
 
+  <title>Follow mail - change your address notification online</title>
+  <meta name="description" content="Change your UK address online with Follow Mail and notify 100's of organisations instantly">
+  <meta name="Aidan Corbett" content="">
+  </title>
+	
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+  	<%= render 'layouts/stylesheets'%>
+	<%= javascript_include_tag "application"%>
+	<%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "application" %>
 
-  <%= stylesheet_link_tag "application" %>
-  <%= csrf_meta_tags %>
-
+  
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
-
   <!-- All JavaScript at the bottom, except this Modernizr build incl. Respond.js
        Respond is a polyfill for min/max-width media queries. Modernizr enables HTML5 elements & feature detects;
        for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ -->
@@ -33,8 +52,13 @@
 </head>
 
 <body>
-  <%= yield %>
-
+    <div id="pagewrap">
+    	<%= render 'layouts/header' %>
+			<div id="content">
+			<article class="post clearfix">
+			<%= yield%>
+			</article>
+	</div>
   <!-- JavaScript at the bottom for fast page loading -->
   <%= javascript_include_tag "application" %>
   <!-- end scripts -->
